@@ -14,4 +14,11 @@
 # R4. To "debug" analyses
 # 5. To communicate results 
 
+getwd()
 setwd("C:/Users/disaini/Desktop/CourseraWD")
+list.files()
+pollution <- read.csv("data/avgpm25.csv", colClasses=c("numeric", "character", "factor","numeric", "numeric"))
+head(pollution)
+attach(pollution) # to make objects within dataframes accessible in R with fewer keystrokes
+# Five numbers
+summary(pm25) # summary(pollution$pm25) - without attach()
